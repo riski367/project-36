@@ -14,7 +14,6 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 COPY app.py ./
 COPY test.py ./
 COPY config.yaml ./  
-COPY fruit model/ ./fruit model/
 
 # Expose port for the Streamlit app
 EXPOSE 8080
