@@ -1,0 +1,70 @@
+/* style.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #4CAF50, #2196F3); /* Gradien hijau ke biru */
+    color: #fff;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+}
+
+.card-header h3 {
+    font-weight: 600;
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.2); /* Latar belakang transparan */
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #fff;
+    color: #007bff;
+}
+
+.form-control {
+    border-radius: 8px;
+}
+
+.btn-primary {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* style.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #4CAF50, #2196F3); /* Gradien hijau ke biru */
+    color: #fff;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+}
+
+.card-header h3 {
+    font-weight: 600;
+}
+
+.nav-tabs .nav-link {
+    color: #000; /* Mengatur warna teks menjadi hitam */
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #fff; /* Latar belakang putih */
+    color: #007bff;        /* Warna teks biru (primer Bootstrap) */
+    font-weight: bold;     /* Opsional: membuat teks lebih tebal */
+}
+
+.form-control {
+    border-radius: 8px;
+}
+
+.btn-primary {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
