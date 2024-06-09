@@ -13,7 +13,6 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 # Copy app files
 COPY app.py ./
 COPY test.py ./
-COPY config.yaml ./  
 
 # Expose port for the Streamlit app
 EXPOSE 8080
