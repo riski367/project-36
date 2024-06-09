@@ -12,7 +12,6 @@ RUN pip3 install -r requirements.txt
 COPY app.py ./
 COPY test.py ./
 COPY config.yaml ./  
-COPY fruit\ model ./
 
 # Expose port for the Streamlit app
 EXPOSE 8080
