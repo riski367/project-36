@@ -1,21 +1,22 @@
-# Base Image
-FROM python:3.11-slim
+# Gunakan base image Python 3.11 slim
+FROM python:3.11.9-slim
 
-# Set working directory
+# Update package manager dan install beberapa paket yang diperlukan
+RUN apt-get update && apt-get install -y build-essential \
+    && apt-get install -y curl wget git
+
+# Setel direktori kerja di dalam kontainer
 WORKDIR /app
 
-# Copy requirements.txt first
-COPY requirements.txt ./
+# Salin seluruh konten dari direktori saat ini ke dalam direktori /app di dalam kontainer
+COPY . .
 
-# Install dependencies
+# Install dependencies yang didefinisikan dalam requirements.txt
 RUN pip install -r requirements.txt
-
-# Copy app files
-COPY app.py ./
-COPY test.py ./
 
 # Expose port for the Streamlit app
 EXPOSE 8080
 
 # Command to run the Streamlit app when the container starts
 CMD ["streamlit", "run", "app.py"]
+
