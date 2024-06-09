@@ -4,14 +4,17 @@ FROM python:3.11-slim
 # Set working directory
 WORKDIR /app
 
+# Copy requirements.txt first
+COPY requirements.txt ./
+
 # Install dependencies
-COPY requirements.txt requirements.txt
-RUN pip3 install -r requirements.txt
+RUN pip3 install --no-cache-dir -r requirements.txt
 
 # Copy app files
 COPY app.py ./
 COPY test.py ./
 COPY config.yaml ./  
+COPY fruit model/ ./fruit model/
 
 # Expose port for the Streamlit app
 EXPOSE 8080
